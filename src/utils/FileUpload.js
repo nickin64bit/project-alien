@@ -18,6 +18,8 @@ const uploadFile = async(localpath)=>{
         return response
     } catch (error) {
         fs.unlinkSync(localpath)
+        return null
     }
 }
-cloudinary.uploader.upload()
+
+export {uploadFile}
